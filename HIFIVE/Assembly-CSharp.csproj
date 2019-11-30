@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6228B1AE-01F6-3521-A1F8-4A4EFCAAAEAE}</ProjectGuid>
+    <ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,6 +66,7 @@
     <Compile Include="Assets\Map\Beach Road\GrassRoadRace\Script\CameraMove.cs" />
     <Compile Include="Assets\Map\City Road\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_Demo.cs" />
     <Compile Include="Assets\Map\City Road\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_UIs.cs" />
+    <Compile Include="Assets\Map\Hell Road\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -99,20 +100,32 @@
     <Compile Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Script\City Road\CameraController.cs" />
+    <Compile Include="Assets\Script\City Road\Run.cs" />
     <Compile Include="Assets\Script\City Road\Timer.cs" />
+    <Compile Include="Assets\Script\City Road\TimerPrint.cs" />
+    <Compile Include="Assets\Script\Life\HealthBarController.cs" />
+    <Compile Include="Assets\Script\Life\PlayerStats.cs" />
     <Compile Include="Assets\Script\MainMenu\NextScene_B.cs" />
     <Compile Include="Assets\Script\MainMenu\NextScene_C.cs" />
+    <Compile Include="Assets\Script\MainMenu\NextScene_H.cs" />
     <Compile Include="Assets\Script\MainMenu\Ship.cs" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Map\City Road\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Map\Beach Road\fire\Procedural fire\Shaders\FireSphere.shader" />
+    <None Include="Assets\Map\Hell Road\Single_rock\readme.txt" />
+    <None Include="Assets\Map\Hell Road\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Map\Hell Road\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Map\Hell Road\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
     <None Include="Assets\Map\City Road\Fantasy Skybox FREE\Fog and Ambient references.txt" />
+    <None Include="Assets\Map\Hell Road\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Map\Hell Road\Lava_Flowing_Shader\ReadMe.txt" />
     <None Include="Assets\Map\Beach Road\fire\Procedural fire\Demo scene\Readme.txt" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -122,6 +135,7 @@
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Map\Hell Road\Rocks\readme.txt" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
@@ -129,19 +143,19 @@
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Map\MainMenu\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -345,13 +359,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/천은정/Desktop/유니티깃헙/HIFIVE/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/천은정/Documents/New Unity Project/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
