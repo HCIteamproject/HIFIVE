@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Demo/MainMenu.unity
+    guid: d9cc68180772ee343a4be19d0759d3bb
+  - enabled: 1
+    path: Assets/Demo/Beach Road.unity
+    guid: c582bf288337dae4f89d8d18d890d947
+  - enabled: 1
+    path: Assets/Demo/City Road.unity
+    guid: eee4a25e05d32b74394e03a9146affde
+  - enabled: 1
+    path: Assets/Demo/Hell Road.unity
+    guid: 8a42431916f66894cacc78c921c195a5
   m_configObjects: {}
