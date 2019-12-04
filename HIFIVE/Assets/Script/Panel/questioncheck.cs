@@ -39,7 +39,7 @@ public class questioncheck : MonoBehaviour
         else
         {
             PlayerStats.Instance.TakeDamage();
-            GameObject.Find("GameScreen").transform.FindChild("o").gameObject.SetActive(true);
+            GameObject.Find("GameScreen").transform.FindChild("x").gameObject.SetActive(true);
             GameObject.Find("GameScreen").transform.FindChild("Panel").gameObject.SetActive(false);
             int num = Random.Range(0, 30);
             commonquestion.setnum(num);
@@ -60,7 +60,7 @@ public class questioncheck : MonoBehaviour
         else
         {
             PlayerStats.Instance.TakeDamage();
-            GameObject.Find("GameScreen").transform.FindChild("o").gameObject.SetActive(true);
+            GameObject.Find("GameScreen").transform.FindChild("x").gameObject.SetActive(true);
             GameObject.Find("GameScreen").transform.FindChild("Panel").gameObject.SetActive(false);
             int num = Random.Range(0, 30);
             commonquestion.setnum(num);

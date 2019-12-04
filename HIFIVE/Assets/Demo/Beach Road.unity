@@ -1372,7 +1372,7 @@ Transform:
   m_GameObject: {fileID: 350074619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1008.1, y: -403.97, z: 37.9}
-  m_LocalScale: {x: 18.690765, y: 5.5827074, z: 0.09020454}
+  m_LocalScale: {x: 18.690765, y: 5.5827074, z: 0.058724053}
   m_Children: []
   m_Father: {fileID: 166639903}
   m_RootOrder: 0
@@ -6776,7 +6776,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ffbd32a298833f641beb6ab675b6dd77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07da4246375041a479dd39d645cb00d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7484,7 +7484,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b57de927f06bd1e43a8310be7b9971e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01220fc53593a7a4285f57755f78cc82, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12603,10 +12603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d0269feee390142a7c5a103956edb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  dist: 5
-  height: 3
-  smoothRotate: 5
+  player: {fileID: 0}
 --- !u!81 &2064429661
 AudioListener:
   m_ObjectHideFlags: 0

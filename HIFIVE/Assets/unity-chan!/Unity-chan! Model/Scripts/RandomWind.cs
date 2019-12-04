@@ -11,7 +11,7 @@ namespace UnityChan
 		// Use this for initialization
 		void Start ()
 		{
-			springBones = GetComponent<SpringManager> ().springBones;
+			//springBones = GetComponent<SpringManager> ().springBones;
 		}
 
 		// Update is called once per frame
@@ -22,9 +22,9 @@ namespace UnityChan
 				force = new Vector3 (Mathf.PerlinNoise (Time.time, 0.0f) * 0.005f, 0, 0);
 			}
 
-			for (int i = 0; i < springBones.Length; i++) {
+			/*for (int i = 0; i < springBones.Length; i++) {
 				springBones [i].springForce = force;
-			}
+			}*/
 		}
 
 		void OnGUI ()
