@@ -115,7 +115,6 @@
     <Compile Include="Assets\Script\Panel\TimerPrint.cs" />
     <Compile Include="Assets\Script\Run\Run.cs" />
     <Compile Include="Assets\Script\Run\Run_Beach.cs" />
-    <Compile Include="Assets\tilemanager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FollowCam.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />

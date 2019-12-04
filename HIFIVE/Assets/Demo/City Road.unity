@@ -1521,8 +1521,8 @@ GameObject:
   - component: {fileID: 31722244}
   - component: {fileID: 31722248}
   - component: {fileID: 31722247}
-  - component: {fileID: 31722246}
   - component: {fileID: 31722245}
+  - component: {fileID: 31722246}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1537,13 +1537,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31722243}
-  m_LocalRotation: {x: 0.13006678, y: -0, z: -0, w: 0.99150527}
-  m_LocalPosition: {x: 0, y: 3.19, z: -4.18}
+  m_LocalRotation: {x: 0.29369178, y: -0, z: -0, w: 0.9559002}
+  m_LocalPosition: {x: 0, y: 3.310007, z: -4.119999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1085707697}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 14.9470005, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.158, y: 0, z: 0}
 --- !u!82 &31722245
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1652,10 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d0269feee390142a7c5a103956edb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  dist: 5
-  height: 3
-  smoothRotate: 5
+  player: {fileID: 1085707687}
 --- !u!81 &31722247
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2870,7 +2867,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b57de927f06bd1e43a8310be7b9971e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01220fc53593a7a4285f57755f78cc82, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7359,7 +7356,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400114, guid: 69c3ed15e9d13481e8f7dc4db5532fb6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 69c3ed15e9d13481e8f7dc4db5532fb6, type: 3}
 --- !u!1001 &166455696
 PrefabInstance:
@@ -21031,7 +21029,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ffbd32a298833f641beb6ab675b6dd77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07da4246375041a479dd39d645cb00d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76105,7 +76103,7 @@ Transform:
   m_GameObject: {fileID: 1755588101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1008.1, y: -582.7567, z: 37.9}
-  m_LocalScale: {x: 18.690765, y: 5.5827074, z: 0.51821923}
+  m_LocalScale: {x: 18.690765, y: 5.5827074, z: 0.147252}
   m_Children: []
   m_Father: {fileID: 232197099}
   m_RootOrder: 0
