@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Demo/Beach Road.unity
+- path: Assets/Demo/MainMenu.unity
   isLoaded: 1
   isActive: 1
