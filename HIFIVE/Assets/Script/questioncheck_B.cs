@@ -1,4 +1,15 @@
-﻿using System.Collections;
+﻿/*****************
+* 프로그램명 : questioncheck_B.cs
+
+* 작성자 : 권순규, 천은정  ( 김성수, 유병주, 전승원 )
+
+* 작성일 : 2019년 12월 7일
+
+* 프로그램 설명 : beach맵의 아이트래커와 키넥트를 이용해 퀴즈의 정답을 체크하는 코드입니다.
+
+***********************************/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,69 +18,92 @@ public class questioncheck_B : MonoBehaviour
     public string check1 = "1";
     public string check2 = "2";
     public string check3 = "3";
-
+    private bool checkin;
     public GameObject o;
     public GameObject x;
     public GameObject Panel;
 
-    public void questionCheck1()
+    void Update()
     {
-        if (commonquestion.check.Equals(check1))
+        if (BodySourceView.rxh < 3)
         {
-            o.gameObject.SetActive(true);
-            Panel.gameObject.SetActive(false);
-            int num = Random.Range(0, 30);
-            commonquestion.setnum(num);
+            checkin = true;
         }
-        else
-        {
-            x.gameObject.SetActive(true);
-            Panel.gameObject.SetActive(false);
-            PlayerStats.Instance.TakeDamage();
-            int num = Random.Range(0, 30);
-            commonquestion.setnum(num);
 
+        if (checkin)
+        {
+            if (PrintGazePosition.xCoord1 < 820 && PrintGazePosition.yCoord1 < 800 && PrintGazePosition.yCoord1 > 600 && PrintGazePosition.xCoord1 > 400 && BodySourceView.rxh > 4.5)
+            {
+                if (commonquestion.Q[commonquestion.num].check.Equals(check1))
+                {
+                    Run_Beach.check = 1;
+                    GameObject.Find("GameScreen").transform.Find("o").gameObject.SetActive(true);
+                    GameObject.Find("GameScreen").transform.Find("Panel").gameObject.SetActive(false);
+                    int num = Random.Range(0, 30);
+                    commonquestion.setnum(num);
+                    checkin = false;
+                }
+                else
+                {
+                    Run_Beach.check = 1;
+                    PlayerStats.Instance.TakeDamage();
+                    GameObject.Find("GameScreen").transform.Find("x").gameObject.SetActive(true);
+                    GameObject.Find("GameScreen").transform.Find("Panel").gameObject.SetActive(false);
+                    int num = Random.Range(0, 30);
+                    commonquestion.setnum(num);
+                    checkin = false;
+                }
+            }
         }
-    }
-
-    public void questionCheck2()
-    {
-        if (commonquestion.check.Equals(check2))
+        if (checkin)
         {
-            o.gameObject.SetActive(true);
-            Panel.gameObject.SetActive(false);
-            int num = Random.Range(0, 30);
-            commonquestion.setnum(num);
+            if (PrintGazePosition.xCoord1 < 1469 && PrintGazePosition.xCoord1 > 820 && PrintGazePosition.yCoord1 < 800 && PrintGazePosition.yCoord1 > 600 && BodySourceView.rxh > 4.5)
+            {
+                if (commonquestion.Q[commonquestion.num].check.Equals(check2))
+                {
+                    Run_Beach.check = 1;
+                    GameObject.Find("GameScreen").transform.Find("o").gameObject.SetActive(true);
+                    GameObject.Find("GameScreen").transform.Find("Panel").gameObject.SetActive(false);
+                    int num = Random.Range(0, 30);
+                    commonquestion.setnum(num);
+                    checkin = false;
+                }
+                else
+                {
+                    Run_Beach.check = 1;
+                    PlayerStats.Instance.TakeDamage();
+                    GameObject.Find("GameScreen").transform.Find("x").gameObject.SetActive(true);
+                    GameObject.Find("GameScreen").transform.Find("Panel").gameObject.SetActive(false);
+                    int num = Random.Range(0, 30);
+                    commonquestion.setnum(num);
+                    checkin = false;
+                }
+            }
         }
-        else
+        if (checkin)
         {
-            x.gameObject.SetActive(true);
-            Panel.gameObject.SetActive(false);
-            PlayerStats.Instance.TakeDamage();
-            int num = Random.Range(0, 30);
-            commonquestion.setnum(num);
-
-        }
-    }
-
-    public void questionCheck3()
-    {
-        if (commonquestion.check.Equals(check3))
-        {
-            o.gameObject.SetActive(true);
-            Panel.gameObject.SetActive(false);
-            int num = Random.Range(0, 30);
-            commonquestion.setnum(num);
-
-        }
-        else
-        {
-            x.gameObject.SetActive(true);
-            Panel.gameObject.SetActive(false);
-            PlayerStats.Instance.TakeDamage();
-            int num = Random.Range(0, 30);
-            commonquestion.setnum(num);
-
+            if (PrintGazePosition.xCoord1 < 1980 && PrintGazePosition.xCoord1 > 1469 && PrintGazePosition.yCoord1 < 800 && PrintGazePosition.yCoord1 > 600 && BodySourceView.rxh > 4.5)
+            {
+                if (commonquestion.Q[commonquestion.num].check.Equals(check3))
+                {
+                    Run_Beach.check = 1;
+                    GameObject.Find("GameScreen").transform.Find("o").gameObject.SetActive(true);
+                    GameObject.Find("GameScreen").transform.Find("Panel").gameObject.SetActive(false);
+                    int num = Random.Range(0, 30);
+                    commonquestion.setnum(num);
+                    checkin = false;
+                }
+                else
+                {
+                    Run_Beach.check = 1;
+                    PlayerStats.Instance.TakeDamage();
+                    GameObject.Find("GameScreen").transform.Find("x").gameObject.SetActive(true);
+                    GameObject.Find("GameScreen").transform.Find("Panel").gameObject.SetActive(false);
+                    int num = Random.Range(0, 30);
+                    commonquestion.setnum(num);
+                    checkin = false;
+                }
+            }
         }
     }
 }

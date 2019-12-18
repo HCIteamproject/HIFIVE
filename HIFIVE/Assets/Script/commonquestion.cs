@@ -5,7 +5,7 @@
 
 * 작성일 : 2019년 11월 30일
 
-* 프로그램 설명 : 해당 주제의 문제와 선택지를 랜덤으로 패널과 버튼에 출력한다.
+* 프로그램 설명 : 문제와 보기,정답을 초기화 시켜주고 랜덤으로 문제를 설정하여 버튼과 패널에 출력해준다.
 
 ***********************************/
 
@@ -20,8 +20,8 @@ public class commonquestion : MonoBehaviour
     public Text but1;
     public Text but2;
     public Text but3;
-    public question[] Q;
-    public static string check = null;
+    public static question[] Q;
+    public static string check;
     public static int num;
 
     // Start is called before the first frame update
@@ -61,6 +61,7 @@ public class commonquestion : MonoBehaviour
 
 
         num = Random.Range(0, 30);
+
     }
 
     // Update is called once per frame

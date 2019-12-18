@@ -1,4 +1,14 @@
-﻿
+﻿/*****************
+* 프로그램명 : sciencequestion.cs
+
+* 작성자 : 권순규 ( 천은정, 김성수, 유병주, 전승원 )
+
+* 작성일 : 2019년 12월 7일
+
+* 프로그램 설명 : 문제와 보기,정답을 초기화 시켜주고 랜덤으로 문제를 설정하여 버튼과 패널에 출력해준다.
+
+***********************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +23,7 @@ public class sciencequestion : MonoBehaviour
     public Text but1 = null;
     public Text but2 = null;
     public Text but3 = null;
-    public question[] Q;
+    public static question[] Q;
     public static string check = null;
     public static int num = 0;
 

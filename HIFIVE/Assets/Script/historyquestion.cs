@@ -1,11 +1,11 @@
 ﻿/*****************
-* 프로그램명 : commonquestion.cs
+* 프로그램명 : historyquestion.cs
 
 * 작성자 : 권순규 ( 천은정, 김성수, 유병주, 전승원 )
 
 * 작성일 : 2019년 11월 30일
 
-* 프로그램 설명 : 해당 주제의 문제와 선택지를 랜덤으로 패널과 버튼에 출력한다.
+* 프로그램 설명 : 문제와 보기,정답을 초기화 시켜주고 랜덤으로 문제를 설정하여 버튼과 패널에 출력해준다.
 
 ***********************************/
 
@@ -23,7 +23,7 @@ public class historyquestion : MonoBehaviour
     public Text but1 = null;
     public Text but2 = null;
     public Text but3 = null;
-    public question[] Q;
+    public static question[] Q;
     public static string check = null;
     public static int num = 0;
 

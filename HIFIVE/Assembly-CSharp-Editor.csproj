@@ -63,6 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Tobii\DemoScenes\Editor\DemoScenesToolsMenu.cs" />
+    <Compile Include="Assets\Tobii\Framework\Editor\EyeTrackingClientLibraryDeployer.cs" />
+    <Compile Include="Assets\Tobii\Framework\Editor\EyeTrackingSettingsWindow.cs" />
+    <Compile Include="Assets\Tobii\Framework\Editor\TobiiEulaCheck.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Editor\CreateLocatorHere.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/천은정/Desktop/깃허브/HIFIVE/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -312,6 +316,9 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Tobii.GameIntegration.Net">
+      <HintPath>C:/Users/천은정/Desktop/깃허브/HIFIVE/Assets/Tobii/Plugins/Tobii.GameIntegration.Net.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/천은정/Desktop/깃허브/HIFIVE/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -684,9 +691,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{3F72F18B-63C0-2EC9-0288-0FC2E5EEB27A}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{6228B1AE-01F6-3521-A1F8-4A4EFCAAAEAE}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{C181A2AE-85F8-2389-8B07-C79A65C23F41}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

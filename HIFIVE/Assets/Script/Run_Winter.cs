@@ -1,7 +1,7 @@
 ﻿/*****************
 * 프로그램명 : Run_Winter.cs
 
-* 작성자 : 천은정 ( 권순규, 김성수, 유병주, 전승원 )
+* 작성자 : 천은정, 전승원 ( 권순규, 김성수, 유병주 )
 
 * 작성일 : 2019년 12월 07일
 
@@ -22,12 +22,13 @@ public class Run_Winter : MonoBehaviour
     AudioSource audioSource;
     float delta = 2.2f; // 좌우 이동가능한 최대값
     public float speed = 1.0f;    // 이동속도
-
+    public bool checkin;
     public GameObject Timer;        // Timer
     public GameObject BackGround;   // 게임 종료시 실행되는 panel
     public GameObject Panel;        // 문제 뜨는 panel
     public GameObject o;
     public GameObject x;
+    public static int check;        // 답안 체크했는지
 
     void Awake()
     {
@@ -43,18 +44,39 @@ public class Run_Winter : MonoBehaviour
     {
         transform.position += Vector3.forward * Time.deltaTime * speed;     // 앞으로 자동 이동
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))        // 왼쪽 버튼 클릭 시
+        if (BodySourceView.lh < 0 && BodySourceView.rh < 0)
         {
-            transform.position += Vector3.left * delta;       // 왼쪽 이동
-            audioSource.Play();
+            checkin = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))       // 오른쪽 버튼 클릭 시
+
+        if (checkin)
         {
-            transform.position += Vector3.right * delta;    // 오른쪽 이동
-            audioSource.Play();
+            if (BodySourceView.lh > 3)        // 왼쪽 버튼 클릭 시
+            {
+                transform.position += Vector3.left * delta;       // 왼쪽 이동
+                checkin = false;
+            }
+        }
+        if (checkin)
+        {
+            if (BodySourceView.rh > 3)       // 오른쪽 버튼 클릭 시
+            {
+                transform.position += Vector3.right * delta;    // 오른쪽 이동
+                checkin = false;
+            }
         }
 
+        if (PlayerStats.Instance.Health == 0)       // 생명이 0이 되면 게임이 끝난다.
+        {
+            speed = 0;      // 움직임 멈추기
+            Timer.gameObject.SetActive(false);     // 오브젝트 비활성화             
+            Panel.gameObject.SetActive(false);     // 오브젝트 비활성화
+            o.gameObject.SetActive(false);
+            x.gameObject.SetActive(false);
+            BackGround.gameObject.SetActive(true);     // 오브젝트 활성화
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)    // 부딪힐 시 뒤로 물러남
@@ -64,22 +86,13 @@ public class Run_Winter : MonoBehaviour
             this.transform.Translate(Vector3.back * speed);
             PlayerStats.Instance.TakeDamage();      // 생명이 하나 사라진다.
 
-            if (PlayerStats.Instance.Health == 0)       // 생명이 0이 되면 게임이 끝난다.
-            {
-                speed = 0;      // 움직임 멈추기
-                Timer.gameObject.SetActive(false);     // 오브젝트 비활성화             
-                Panel.gameObject.SetActive(false);     // 오브젝트 비활성화
-                o.gameObject.SetActive(false);
-                x.gameObject.SetActive(false);
-                BackGround.gameObject.SetActive(true);     // 오브젝트 활성화
-
-            }
         }
     }
     private void OnTriggerEnter(Collider other)     // Trigger 충돌 발생
     {
         if (other.transform.tag == "question")
         {
+            check = 0;
             Panel.gameObject.SetActive(true);
         }
         if (other.transform.tag == "check")
@@ -91,8 +104,13 @@ public class Run_Winter : MonoBehaviour
 
     private void OnTriggerExit(Collider other)      // Trigger 충돌 끝
     {
+
         if (other.transform.tag == "question")
         {
+            if (check == 0)
+            {
+                PlayerStats.Instance.TakeDamage();      // 생명이 하나 사라진다.
+            }
             Panel.gameObject.SetActive(false);
         }
     }

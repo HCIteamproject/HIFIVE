@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*****************
+* 프로그램명 : Rank.cs
+
+* 작성자 : 천은정 ( 권순규, 김성수, 유병주, 전승원 )
+
+* 작성일 : 2019년 12월 5일
+
+* 프로그램 설명 : 사용자의 닉네임을 입력받아 랭킹을 매겨준다.
+
+***********************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,7 +46,6 @@ public class Rank : MonoBehaviour
     public InputField inputField_Name;
     public string[] namedata=new string[100];       // 이름 저장 배열
     public float[] scoredata=new float[100];           // 점수 저장 배열
-    public int num = 0;
     public string strFilePath;   // 파일 경로
     List<DataOfMember> Arr = new List<DataOfMember>();
 
@@ -57,8 +66,8 @@ public class Rank : MonoBehaviour
     {
         strFilePath = "Assets/data.txt";
 
-        ReadData();
-        Load();
+        //ReadData();
+        // Load();
     }
 
     // Update is called once per frame
@@ -69,6 +78,7 @@ public class Rank : MonoBehaviour
 
     public void WriteData(string strData)       // txt 파일 쓰기
     {
+        strFilePath = "Assets/data.txt";
         FileStream f = new FileStream(strFilePath, FileMode.Append);
         StreamWriter writer = new StreamWriter(f);
         writer.WriteLine(strData);
@@ -81,11 +91,11 @@ public class Rank : MonoBehaviour
 
     public void ReadData()          // txt 파일 읽기
     {
+        strFilePath = "Assets/data.txt";
         string readstr;
         FileStream f = new FileStream(strFilePath, FileMode.Open);
         StreamReader read = new StreamReader(f);
 
-        int i = 0;
         float scorebuf;
         string namebuf;
         while ((readstr = read.ReadLine()) != null)     // text 파일 읽어서 배열에 저장
@@ -108,6 +118,13 @@ public class Rank : MonoBehaviour
         PlayerPrefs.SetString("Name", inputField_Name.text);
         name = PlayerPrefs.GetString("Name");
         WriteData(name);
+    }
+
+    public void Onclick()
+    {
+        ReadData();
+        Load();
+        Arr.Clear();
     }
 
     public void Load()
