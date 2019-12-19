@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*****************
+* 프로그램명 : TileManager_City.cs
+
+* 작성자 : 김성수 ( 천은정, 권순규, 유병주, 전승원 )
+
+* 작성일 : 2019년 12월 7일
+
+* 프로그램 설명 : City맵의 맵이 끈기지 않도록 계속 생성하여 붙여준다.
+
+***********************************/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
